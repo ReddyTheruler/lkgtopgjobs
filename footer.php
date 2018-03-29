@@ -1,0 +1,2 @@
+<center> <a href="http://lkgtopg.in/aboutus.php" target="_blank">About Us</a>  | <a href="http://lkgtopg.in/privacy.php" target="_blank">Privacy Policy</a> | <a href="http://lkgtopg.in/sitemap.php" target="_blank">SiteMap</a> | <a href="http://lkgtopg.in/Post.php" target="_blank">Post a Job</a> |<a href="http://lkgtopg.in/contact.php" target="_blank">Contact Us</a> </center>
+<center><strong>&copy; 2018 LKGtoPG. All Rights Reserved |  <a href="http://lkgtopg.in/">LKGtoPG </a>does not charge job seekers any fees or other consideration for using services.</strong></center>

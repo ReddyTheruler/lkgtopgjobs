@@ -1,0 +1,59 @@
+Java 
+<button  id="incCount">Votes</button>
+
+
+<div id="result">
+</div>
+
+
+
+
+
+
+<script>
+
+// This is the number of clicks so far
+var clicks = {};
+// If a value is already present, assign clicks to that
+if (localStorage.clicks) {
+    clicks = JSON.parse(localStorage.clicks);    
+}
+
+function showNum() {
+    var text = [];
+    // Loop through each key in clicks
+    for (var key in clicks) {
+        text.push("Total Votes '" + key + "' " + clicks[key] + " ");
+    }
+    document.getElementById("result").innerHTML = text.join("");
+}
+
+// Changes click by some amount
+function changeClick(click, amount) {
+    if (typeof (Storage) !== "undefined") {
+        if (typeof clicks[click] !== "undefined") {
+            clicks[click] += amount;
+        } else {
+            clicks[click] = 1;
+        }
+        // Change clicks into a string format and save it to localStorage
+        localStorage.clicks = JSON.stringify(clicks);
+        // Update result
+        showNum();
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+document.getElementById("incCount").addEventListener("click", function() {
+    var val = document.getElementById("incCount").value;
+    changeClick(val, 1);    
+});
+document.getElementById("decCount").addEventListener("click", function() {
+    var val = document.getElementById("myInput").value;
+    changeClick(val, -1);    
+});
+
+showNum();
+
+</script>
